@@ -1,8 +1,8 @@
 <?php
  //verbindung zur db herstellen
-    $host = "localhost";
-    $user = "teamsnooze"; 
-    $password = "teamsnooze";
-    $database = "snooze";
+    $host = "cloudhoteldb.mysql.database.azure.com";
+    $user = "cloudhoteladmin"; 
+    $password = "CLCOpasword23";
+    $database = "databasehotel";
 
 ?>
