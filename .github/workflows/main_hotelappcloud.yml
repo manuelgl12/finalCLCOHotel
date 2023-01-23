@@ -56,5 +56,5 @@ jobs:
         with:
           app-name: 'hotelappcloud'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_6D48B7D8724D4603B0D5958DCA1D42A1 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8445CE7394B341AF9BD5E9B3B9CB0DEE }}
           package: .
