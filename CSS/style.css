@@ -1,0 +1,1080 @@
+
+  *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+/*----------HOMEPAGE----------*/
+.header{
+  min-height: 100vh;
+  width: 100%;
+  background-image: url('images/banner.png');
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+nav{
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.nav-links{
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 8px 10px;
+  position: relative;
+  margin: 7px;
+}
+
+.nav-links ul li a{
+  color: aliceblue;
+  text-decoration: none; 
+  font-size: 25px;
+}
+
+.nav-links ul li::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #a7a2a1;
+  display: block;
+  margin: auto;
+  transition:0.5s;
+}
+
+.nav-links ul li:hover::after{
+  width:100%
+}
+
+.text-box{
+  position: absolute;
+  color: aliceblue;
+  width: 100%;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.text-box h1{
+  font-size: 150px;
+  color: rgb(0, 0, 0);
+}
+
+.galerie-button{
+  display: inline-block;
+  color: rgb(5, 5, 5);
+  text-decoration: none;
+  border: 1px solid;
+  padding: 12px 34px;
+  font-size: 30px;
+  position: relative;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.galerie-button:hover{
+  border: 1px solid #dbd8d7;
+  background: #a7a2a1;
+  transition: 0.7s;  /*button wird "beige" wenn man drüberfährt, mit 0.7s transition time*/
+}
+.btn{
+  display: none;
+}
+
+@media (max-width: 700px){
+  .text-box h1{
+      font-size:20px;
+  }
+  .nav-links ul li{
+      display: block;
+  }
+  .nav-links{
+      position: absolute;
+      background: #dbd8d7;
+      height: 100vh;
+      width: 200px;
+      top:0;
+      right: 0px;
+      text-align: left;
+      z-index: 2;
+  }
+ 
+}
+
+
+/*----- HOMEPAGE NEWS -----*/
+
+.news{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+h1{
+  font-size: 56px;
+  font-weight: 400;
+}
+
+
+p{
+  color: rgb(8, 8, 8);
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+}
+
+.row{
+  margin-top: 1%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.news-col{   /*news in box*/
+  flex-basis: 31%;
+  background: rgb(185, 185, 184);
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: 0.5s; 
+}
+
+h3{
+  font-size: 40px;
+  text-align: center;
+  margin: 10px 0;
+  font-weight: 400;
+}
+
+.news-col:hover{
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 100); /*schatten beim drüberfahren von den news*/
+}
+
+
+@media (max-width:700px) {
+    .row{
+        flex-direction: column;
+    }
+
+}
+
+
+/*----HOMEPAGE ZIMMER-----*/
+
+.eindruck{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.eindruck-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+
+.eindruck-col img{
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.eindruck-col img:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 200);
+}
+
+
+.eindruck-col p{
+    padding: 0;
+}
+
+.eindruck-col h3{
+    margin-top:10px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 24px;
+}
+
+
+/*------HOMEPAGE FOTOS------*/
+.fotos{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.fotos-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+
+.fotos-col img{
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.fotos-col img:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 200);
+}
+
+
+.fotos-col p{
+    padding: 0;
+}
+
+.fotos-col h3{
+  font-size: 24px;
+}
+
+
+
+
+/*-----------------HOMEPAGE KONTAKT-----------------*/
+
+.cta h1{
+  color: #fff;
+  margin-bottom: 20px;
+  padding: 0;
+}
+.cta a{
+  color: white;
+}
+
+.kontakt-button{
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid;
+  padding: 12px 34px;
+  font-size: 30px;
+  position: relative;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.kontakt-button:hover{
+  border: 1px solid #dbd8d7;
+  background: #a7a2a1;
+  transition: 0.7s;  /*button wird "beige" wenn man drüberfährt, mit 0.7s transition time*/
+}
+
+
+@media(max-width: 768px){
+  .cta h1{
+    font-size: 24px;
+  }
+
+  .cta a{
+    font-size: 18px;
+    text-align: center;
+    flex-direction: column;
+    position: relative;
+    display: inline-block;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------LOGIN/REGISTRIERUNG-------------------------*/
+
+.loginseite{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #a7a2a1;
+  padding: 30px;
+}
+
+.containerlogin{
+  position: relative;
+  max-width: 850px;
+  width: 100%;
+  background: #fff;
+  padding: 20px 30px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  perspective: 2700px;
+}
+
+.containerlogin .cover{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 50%;
+  z-index: 98;
+  transition: all 1s ease;
+  transform-origin: left;
+  transform-style: preserve-3d;
+}
+
+.containerlogin .cover::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #a7a2a1;
+  opacity: 0.5;
+}
+
+.containerlogin #flip:checked ~ .cover{
+  transform: rotateY(-180deg); /*wenn registrieren/login angeklickt wird, switch*/
+}
+
+.containerlogin .cover img{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 12;
+}
+
+
+
+.containerlogin .form{
+  height: 100%;
+  width: 100%;
+  background: #fff;
+}
+
+.containerlogin .form-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-content .login-form, 
+.form-content .registration-form{
+  width: calc(100% / 2 - 5px);
+  background: rgb(255, 255, 255);
+}
+
+form .form-content .title{
+  position: relative;
+  font-size: 24px;
+  font-weight: 500;
+  color: #333;
+}
+
+form .form-content .title:before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 25px;
+  background: #a7a2a1;
+
+}
+
+form .registration-form .title:before{
+  width: 20px;
+
+}
+
+form .form-content .input-boxes{
+  margin-top: 30px;
+}
+
+form .form-content .input-box{
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  margin: 0 10px;
+  position: relative;
+  text-decoration: underline;
+}
+
+.form-content .input-box input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 0 30px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+form .form-content .text{
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+
+form .form-content .button input{
+  width: 340px;
+  height: 60px;
+  color: #fff;
+  background: #a7a2a1;
+  border-radius: 6px;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+form .form-content .button{
+  color: #fff;
+  margin-top: 40px;
+}
+
+form .form-content .button input:hover{
+  background: #111111;
+}
+
+form .form-content label{
+  color: #a7a2a1;
+  cursor: pointer;
+}
+
+form .form-content label:hover{
+  text-decoration: underline;
+}
+
+form .form-content .login-text,
+form .form-content .reg-text{
+  text-align: center;
+  margin-top: 25px;
+}
+
+
+.containerlogin #flip{
+  display: none;
+}
+
+@media(max-width: 768px){
+.containerlogin .cover{
+    display: none;
+  }
+.form-content .login-form, 
+.form-content .registration-form{
+    width: 100%;
+  }
+.form-content .registration-form{
+  display: none;
+  }
+
+.containerlogin #flip:checked ~ form .registration-form{
+  display: block;
+  }
+.containerlogin #flip:checked ~ form .login-form{
+  display: none;
+    }
+}
+
+
+
+
+
+
+
+/*-----------------------------------------BOOTSTRAP NAV-------------------------------------*/
+
+.carousel-item{
+  height: 100vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  background-size: cover;
+  
+}
+
+.navbar .navbar-brand a{
+  padding: 1rem 0;
+  display: block;
+  text-decoration: none;
+}
+
+.navbar-brand{ /*styling Hotel Snooze schrift*/
+  font-size: 2.6rem;
+}
+
+
+.navbar-expand-lg .navbar-nav .nav-link{
+  padding: 2rem 1.2rem;
+  font-size: 1.4rem;
+  position: relative;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:hover{
+  border-top: 4px solid #080808;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link.active{
+  border-top: 4px solid ;
+  color: rgb(0, 0, 0);
+}
+
+
+
+.nav-link{ /*styling Navbar Home, Impressum, Login.....*/
+  flex: 1;
+  font-size:25px;
+  text-align: right;
+}
+
+.nav-link::after{  /*Strich unter den Navigationsseiten*/
+  content: '';
+  width: 0%;
+  height: 1px;
+  background:rgb(75, 74, 74);
+  display: block;
+  margin: auto;
+  transition:0.5s;
+  }
+  
+  .nav-link:hover::after{ /*width vom strich wird größer mit 0.5s*/
+  width:100%
+  }
+
+  .navbar-nav{ /*ul liste navbar*/
+    list-style-type: none;
+  }
+
+  .navbar{ /*alles erste klasse für die gesamte navbar*/ 
+    padding: 3rem 2rem;
+    height: 0rem;
+    min-height: 12vh;
+  }
+
+  .navbar-toggler{ /*farbe und styling vom toggler*/
+    background: #a7a2a1;
+    border: none;
+    padding: 10px 6px;
+    outline: none;
+  }
+
+  .navbar-toggler span{
+    display: block;
+    width: 22px;
+    height: 2px;
+    border:1px;
+    background: #fff;
+  }
+
+  .navbar-toggler span + span{
+    margin-top: 4px;
+    width: 18px;
+    margin-left: 4px;
+  }
+
+  .navbar-toggler span + span + span{
+    width: 10px;
+    margin-left: 10px;
+  }
+
+  .navbar-nav button{
+    padding: 1.2rem 0;
+  }
+
+  
+
+
+
+@media (max-width: 1200px){ /*TODO??? nicht sicher ob wirklich funktioniert */
+  .carousel-item{
+    height: 240px;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+  }
+
+  .navbar-brand {
+      font-size:25px;
+  }
+
+
+  .navbar-brand img{
+    width: 30px;
+    height: 30px;;
+  }
+  .navbar-expand-lg .navbar-nav .nav-link{
+    font-size: 20px;
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------IMPRESSUM--------------------------*/
+
+.impressumbody{
+  background-color: #a7a2a1;
+}
+.aboutimpressum{
+  width: 100%;
+  height: 100vh;
+  background: #a7a2a1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .aboutimpressum .contentimpressum img{
+  height: auto;
+  width: 600px;
+  max-width: 100%;
+} */
+
+.textimpressum{
+  width: 550px;
+  max-width: 100%;
+  padding: 0 10px;
+}
+
+.contentimpressum{
+  width: 1280px;
+  max-width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.textimpressum h1{
+  color: #000000;
+  font-size: 85px;
+  font-weight: 20;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.textimpressum h4{
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+  font-weight: 400;
+  margin-bottom: 25px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+
+.textimpressum h6{
+  color: #000000;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 1px;
+  margin-bottom: 45px;
+}
+
+.kontakt-buttonimpressum{
+  background-color:#494949;
+  color: rgb(255, 255, 255);
+  border: 2px solid transparent;
+  text-decoration: none;
+  padding: 10px 30px;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 13px;
+}
+
+.kontakt-buttonimpressum:hover{
+  transform: scale(1.2);
+  background-color: transparent;
+  color: #000000;
+  transition: 0.4s;
+  cursor: pointer;
+  border: 1px solid #dbd8d7;
+  background: #a7a2a1;
+}
+
+
+@media screen and (max-width: 1180px) {
+  .aboutimpressum{
+    width: 100%;
+    height: auto;
+    padding: 70px 0px;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .aboutimpressum .contentimpressum img{
+    margin-bottom: 35px;
+  }
+  .textimpressum h1{
+    font-size: 60px;
+    margin-bottom: 25px;
+  }
+}
+
+
+
+
+
+/*------------------------------------------------------------ICONS---------------------------------------*/
+
+.fa {
+  padding: 20px;
+  font-size: 20px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  margin: 10px 2px;
+  border-radius: 60px;
+  }
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+
+
+
+/*---------------------------------------KONTAKTSEITE---------------*/
+.contact-section{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-info{
+  color: rgb(0, 0, 0);
+  line-height: 65px;
+  max-width: 500px;
+  padding-left: 10px;
+  font-size: 18px
+}
+
+.contact-info i{
+  margin-right: 20px;
+  font-size: 25px;
+}
+
+.contact-form{
+  max-width: 700px;
+  margin-right: 50px;
+}
+
+.contact-info, .contact-form{
+  flex:1;
+}
+
+.contact-form h2{
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-size: 35px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.contact-form .textkontakt-box, .contact-form .textkontakt-boxdate{
+  background: rgba(0, 0, 0, 0.281);
+  color: rgb(0, 0, 0);
+  border: none;
+  width: calc(50% - 10px);
+  height: 50px;
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.contact-form .textkontakt-box:first-child, .contact-form .textkontakt-boxdate:first-child{
+  margin-right: 15px;
+}
+
+.contact-form textarea{
+  background: rgba(0, 0, 0, 0.281);
+  color: rgb(0, 0, 0);
+  border: none;
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  min-height: 200px;
+  max-height: 400px;
+  resize: vertical;
+  border-radius: 5px;
+  box-shadow:  0 1px 1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.contact-form .send-btn{
+  float: right;
+  background: #a7a2a1;
+  color: rgb(0, 0, 0);
+  border: none;
+  width: 120px;
+  height: 40px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 5px;
+}
+
+.contact-form .send-btn:hover{
+  background: rgba(43, 42, 42, 0.178);
+}
+
+@media screen and (max-width: 950px) {
+  .contact-section{
+    flex-direction:column-reverse; /*sobald fenster kleiner wird, kommen kontaktdaten nach unten*/
+    margin-top: 250px;
+  }
+
+  .contact-info, .contact-form{
+    margin: 30px 50px;
+  }
+
+  .contact-form h2{
+    font-size: 30px;
+  }
+
+  .contact-form .textkontakt-box{
+    width: 100%;
+    margin-left: 0;
+  }
+
+
+}
+
+
+/*alert message - wenn nachricht zugeschickt wurde kriegt user benachrichtigung*/
+
+.alert-success{
+  z-index: 1;
+  background: rgb(206, 226, 206);
+  font-size: 18px;
+  padding: 20px 40px;
+  min-width: 420px;
+  position: fixed;
+  right: 0;
+  top: 10px;
+  border-left:  8px solid darkslategrey;
+  border-radius: 4px;
+}
+
+.alert-error{
+  z-index: 1;
+  background: rgb(243, 216, 216);
+  font-size: 18px;
+  padding: 20px 40px;
+  min-width: 420px;
+  position: fixed;
+  right: 0;
+  top: 10px;
+  border-left:  8px solid rgb(255, 171, 149);
+  border-radius: 4px;
+}
+
+
+.contact-form ::placeholder{
+  color: black;
+}
+
+
+
+
+
+/*-------------------------HILFESEITE-----------------------------*/
+
+.hilfe h1{
+  text-align: center;
+  margin: 50px 0;
+  margin-top: 150px;
+}
+
+.accordion{
+  text-align: center;
+}
+
+.accordion-item, .accordion-header{ 
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin-bottom: 20px;
+}
+
+.accordion-item{ /*hintergrund für die fragenbpx*/
+  box-shadow: 0 2px 25px 0 rgba(110, 130, 208, .18);
+}
+
+.accordion-button{ /*Fragentext "button"*/
+  width: 100%;
+  height: 60px;
+  color: #000;
+  font-weight: bold;
+  text-align: left;
+  text-decoration: none;
+}
+
+
+.accordion-body{
+  background: #e8eeff;
+}
+
+
+
+
+/*---------------------------------------HOTEL GALLERIE----------------------------------------*/
+
+.rowgalerie{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.rowgalerie .columngalerie{
+  flex: 33.3%; /*weil 3 columns*/
+  width: auto;
+  overflow: hidden;
+  padding: 0 4px;
+  height: 100%;
+}
+
+.rowgalerie .columngalerie img{
+  margin-top: 2%;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  filter: grayscale(1) brightness(0.5); /*bilder werden grau*/
+  border-radius: 5px;
+  transition: 0.2s linear;
+}
+
+.rowgalerie .columngalerie img:hover{
+  filter: grayscale(0) brightness(1); /*bilder werden farbig beim drüberfahren*/
+}
+
+@media only screen and (max-width: 600px){
+  .rowgalerie .columngalerie{
+    flex:100%;
+  }
+  .rowgalerie .columngalerie img{
+    filter: grayscale(0) brightness(1);
+  }
+}
+
+  
+
+
+
+
+
+
+
+.filter{
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  background: rgb(198, 229, 238);
+  background: -moz-linear-gradient(90deg, rgb(198, 229, 238) 0%, rgb(83, 183, 245) 100%);
+  background: -webkit-linear-gradient(90deg, rgb(198, 229, 238) 0%, rgb(83, 183, 245) 100%);
+  background: linear-gradient(90deg, rgb(198, 229, 238) 0%, rgb(83, 183, 245) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e94ca1",endColorstr="#c74ae9",GradientType=1);
+  opacity: .7;
+ }
+ table{
+  
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 70%; 
+  border-collapse: collapse;
+  border-spacing: 0;
+  box-shadow: 0 2px 15px rgba(64,64,64,.7);
+  border-radius: 12px 12px 0 0;
+  overflow-y: hidden;
+ 
+ }
+ td , th{
+  padding: 15px 20px;
+  text-align: center;
+  
+ 
+ }
+ th{
+  background-color: #585555;
+  color: #fafafa;
+  font-family: 'Open Sans',Sans-serif;
+  font-weight: 200;
+  text-transform: uppercase;
+ 
+ }
+ tr{
+  width: 100%;
+  background-color: #fafafa;
+  font-family: 'Montserrat', sans-serif;
+ }
+ tr:nth-child(even){
+  background-color: #eeeeee;
+ }
+
+
